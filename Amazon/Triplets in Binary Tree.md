@@ -13,19 +13,15 @@ import java.util.ArrayList;
 
 public class Solution {
 
-	private static void fillTriplets(List<List<Integer>> triplets, 
-									 TreeNode<Integer> gParent, //grandparent
-									 TreeNode<Integer> parent, //parent
-									 TreeNode<Integer> child, //curr node
-									 int x) {
+	private static void fillTriplets(List<List<Integer>> triplets, TreeNode<Integer> gParent, //grandparent
+								       TreeNode<Integer> parent, //parent
+								       TreeNode<Integer> child, //curr node
+								       int x) {
 	    if (child == null) {
 	        return;
 	    }
 
-		/*
-			If both parent and grand-parent are not null
-			then it is a valid triplet.
-		*/
+	    /*If both parent and grand-parent are not null then it is a valid triplet.*/
 	    if (gParent != null && parent != null) {
 	        int currValue = gParent.data + parent.data + child.data;
 
